@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem 'devise'
+gem 'rspec-rails', '~> 5.0.0', group: [:development, :test]
+gem 'shoulda-matchers', '~> 4.0', group: [:test]
