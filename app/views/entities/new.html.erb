@@ -1,0 +1,12 @@
+<h1>New Transaction for <%= @group.name %></h1>
+<%= form_with model: [@group, @entity], local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+  <%= form.submit "Save" %>
+<% end %>
