@@ -4,6 +4,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :groups, only: [:index, :new, :create]
-  resources :entities, only: [:index, :new, :create]
+  authenticated :user do
+    root 'groups#index', as: :authenticated_root
+  end
+
+  root to: 'splash#index'
+
+  resources :groups, only: [:index, :new, :create] do
+    resources :entities, only: [:index, :new, :create]
+  end
 end
