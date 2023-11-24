@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :entities
   has_many :groups
+
+  mount_uploader :profile_photo, ProfilePhotoUploader
 end
