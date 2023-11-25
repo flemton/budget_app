@@ -1,12 +1,22 @@
-<h1>New Transaction for <%= @group.name %></h1>
+<div class="categories-index">
+<div class="auth-nav-container">
+    <%= link_to 'javascript:history.back()', class: 'nav-item' do %>
+      <%= image_tag('left-arrow.png', alt: 'Back', class: 'left-arrow') %>
+    <% end %>
+    <h2 class="nav-items">New <%= @group.name %></h2>
+    <%= image_tag('search.png', alt: 'Search', class: 'search') %>
+  </div>
 <%= form_with model: [@group, @entity], local: true do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name", required: true %>
   </div>
-  <div>
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
+  <div class="field">
+    <%= form.number_field :amount, placeholder: "Amount", required: true %>
   </div>
-  <%= form.submit "Save" %>
+  <div class="add-category">
+      <div class="add-category-border">
+        <%= form.submit "SAVE", class:"add-category-link" %>
+      </div>
+    </div>
 <% end %>
+</div>

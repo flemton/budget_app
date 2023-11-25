@@ -1,12 +1,29 @@
-<h1>New Category</h1>
-<%= form_with model: @group, local: true do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<div class="categories-index">
+  <div class="auth-nav-container">
+    <%= link_to 'javascript:history.back()', class: 'nav-item' do %>
+      <%= image_tag('left-arrow.png', alt: 'Back', class: 'left-arrow') %>
+    <% end %>
+    <h2 class="nav-items">CATEGORIES</h2>
+    <%= image_tag('search.png', alt: 'Search', class: 'search') %>
   </div>
-  <div>
-    <%= form.label :icon %>
-    <%= form.text_field :icon %>
-  </div>
-  <%= form.submit "Save" %>
-<% end %>
+
+  <% if @group.errors.any? %>
+  error
+  <% end %>
+
+  <%= form_for(@group) do |f| %>
+    <div class="field">
+      <%= f.text_field :name, autocomplete: "off", placeholder: "Name", required: true %>
+    </div>
+    <hr>
+    <div class="field-icon">
+      Select icon: <%= f.select :icon, options_for_select(@icons.map { |icon| [icon.html_safe, icon] }, @icons.first), {}, autocomplete: "off" %>
+    </div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="add-category">
+      <div class="add-category-border">
+        <%= f.submit "CREATE", class:"add-category-link" %>
+      </div>
+    </div>
+  <% end %>
+</div>

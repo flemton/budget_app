@@ -73,5 +73,7 @@ group :test do
   gem 'shoulda-matchers'
 end
 
+gem 'carrierwave'
 gem 'devise'
+gem 'mini_magick'
 gem 'rubocop', '>= 1.0', '< 2.0'
