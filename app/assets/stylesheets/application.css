@@ -54,6 +54,15 @@ img {
   filter: brightness(0) invert(1);
 }
 
+.search {
+  display: inline-block;
+  width: 22px;
+  height: auto;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  padding: 0 8px;
+}
+
 .nav-item {
   margin: 0 12px;
   color: white;
@@ -173,4 +182,63 @@ a {
   border: none;
   background-color: #5fb523;
   cursor: pointer;
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+}
+
+.categories > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.totals {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.categories-show-li .left,
+.categories-show-li .right {
+  display: flex;
+  align-items: center;
+}
+
+.categories-show-li .right {
+  justify-content: flex-end;
+}
+
+.categories-show-li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.categories-index li {
+  list-style: none;
+  background-color: white;
+  width: 80%;
+  height: 100px;
+  margin: 10px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.field-icon {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.category-icon {
+  font-size: 25px;
+  padding: 4px;
 }

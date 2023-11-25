@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   root to: 'splash#index'
 
-  resources :groups, only: [:index, :new, :create] do
+  resources :groups, only: [:index, :new, :create, :show] do
     resources :entities, only: [:index, :new, :create]
   end
 end

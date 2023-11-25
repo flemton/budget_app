@@ -6,12 +6,12 @@
     <h2 class="nav-items"><%= @group.name %></h2>
     <%= image_tag('search.png', alt: 'Search', class: 'search') %>
   </div>
-  <div class="totals">
+  <div class="gift-credit">
     <span>Total for <%= @group.name %></span>
-    <span>$ <%= @total %></span>
+    <span>$ <%= @total_for_category %></span>
   </div>
   <hr>
-    <% @entities.each do |entity| %>
+    <% @group.entities.each do |entity| %>
       <div class="categories-show-li">
         <div class="left">
           <%= entity.name %>

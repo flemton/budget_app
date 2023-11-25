@@ -4,6 +4,7 @@ class EntitiesController < ApplicationController
 
   def index
     @entities = @group.entities
+    @total = @entities.sum(:amount)
   end
 
   def new
