@@ -1,8 +1,18 @@
-<h1>Categories</h1>
+<div class="auth-nav-container">
+    <%= link_to 'javascript:history.back()', class: 'nav-item' do %>
+      <%= image_tag('left-arrow.png', alt: 'Back', class: 'left-arrow') %>
+    <% end %>
+    <h2 class="nav-items">CATEGORIES</h2>
+    <p class="nav-item">Search</p>
+  </div>
 <% @groups.each do |group| %>
   <div>
     <h2><%= group.name %></h2>
     <p>Total Amount: <%= group.entities.sum(:amount) %></p>
   </div>
 <% end %>
-<%= link_to 'Add a new category', new_group_path %>
+<div class="add-category">
+  <%= link_to new_group_path, class: 'add-category-border' do %>
+  <div class="add-category-link">ADD CATEGORY</div>
+  <% end %>
+</div>
