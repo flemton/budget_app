@@ -79,16 +79,16 @@ img {
   flex-direction: column;
 }
 
-.nav-item > a {
-  color: white;
-}
-
 .nav-item > input,
 a {
   text-decoration: none;
   background: none;
   fill: none;
   border: none;
+  color: white;
+}
+
+.nav-item > a {
   color: white;
 }
 
@@ -103,11 +103,6 @@ a {
   width: 100vw;
   height: 6vh;
   border: 2px solid #434b5412;
-}
-
-#user_email,
-#user_password,
-#user_name {
 }
 
 .forgot,
@@ -232,6 +227,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .field-icon {
   display: flex;
   justify-content: center;
