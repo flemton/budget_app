@@ -192,6 +192,8 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 35px;
+  padding: 12px;
 }
 
 .categories-show-li .left,
