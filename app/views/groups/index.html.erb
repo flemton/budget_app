@@ -15,12 +15,14 @@
 <hr>
 <% @groups.each do |group| %>
   <%= link_to group_entities_path(group) do %>
-    <div class="left">
-      <%= content_tag(:span, raw(group.icon), class: "category-icon") %>
-      <span><%= group.name %></span>
-    </div>
-    <div class="right">
-      total: <%= number_to_currency(group.entities.sum(:amount)) %>
+    <div class="categories-show-li">
+      <div class="left">
+        <%= content_tag(:span, raw(group.icon), class: "category-icon") %>
+        <span><%= group.name %></span>
+      </div>
+      <div class="right">
+        total: <%= number_to_currency(group.entities.sum(:amount)) %>
+      </div>
     </div>
   <% end %>
 <% end %>

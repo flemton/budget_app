@@ -187,12 +187,6 @@ a {
   color: gray;
 }
 
-.categories > a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .totals {
   display: flex;
   flex-direction: row;
@@ -239,6 +233,6 @@ a {
 }
 
 .category-icon {
-  font-size: 25px;
-  padding: 4px;
+  font-size: 50px;
+  padding: 0 10px 0 0;
 }
