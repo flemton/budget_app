@@ -21,7 +21,7 @@
         <span><%= group.name %></span>
       </div>
       <div class="right">
-        total: <%= number_to_currency(group.entities.sum(:amount)) %>
+        <%= number_to_currency(group.entities.sum(:amount)) %>
       </div>
     </div>
   <% end %>
