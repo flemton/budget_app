@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :entities
   has_many :groups
 
+  validates :name, presence: true
   validates :name, length: { minimum: 2, maximum: 50 }
 
   mount_uploader :profile_photo, ProfilePhotoUploader
