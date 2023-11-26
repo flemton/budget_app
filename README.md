@@ -50,7 +50,7 @@
 **Add groups (categories) and expenses**
 
 ### Live demo <a name="live-demo">
-[Budget App]()
+[Budget App](https://budget-app-5y5k.onrender.com)
 </a>
 
 ### Presentation Video <a name="presentation">
