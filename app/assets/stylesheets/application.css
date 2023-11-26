@@ -214,6 +214,10 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 42px;
+  margin: 12px;
+  background: white;
+  padding: 12px;
 }
 
 .categories-index li {
