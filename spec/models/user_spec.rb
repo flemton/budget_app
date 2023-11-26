@@ -5,7 +5,8 @@ RSpec.describe User, type: :model do
   it { should have_many(:groups) }
 
   it 'is valid with a valid email and password' do
-    user = User.new(name: 'Test User', email: 'test@example.com', password: 'password123', password_confirmation: 'password123')
+    user = User.new(name: 'Test User', email: 'test@example.com', password: 'password123',
+                    password_confirmation: 'password123')
     expect(user).to be_valid
   end
 
@@ -16,7 +17,8 @@ RSpec.describe User, type: :model do
   end
 
   it 'is invalid with a duplicate email' do
-    User.create(name: 'Test User', email: 'test@example.com', password: 'password123', password_confirmation: 'password123')
+    User.create(name: 'Test User', email: 'test@example.com', password: 'password123',
+                password_confirmation: 'password123')
     user = User.new(email: 'test@example.com')
     user.valid?
     expect(user.errors[:email]).to include('has already been taken')
