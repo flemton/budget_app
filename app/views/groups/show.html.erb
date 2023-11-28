@@ -1,0 +1,29 @@
+<div class="categories-index">
+  <div class="auth-nav-container">
+    <%= link_to 'javascript:history.back()', class: 'nav-item' do %>
+      <%= image_tag('left-arrow.png', alt: 'Back', class: 'left-arrow') %>
+    <% end %>
+    <h2 class="nav-items"><%= @group.name %></h2>
+    <%= image_tag('search.png', alt: 'Search', class: 'search') %>
+  </div>
+  <div class="gift-credit">
+    <span>Total for <%= @group.name %></span>
+    <span>$ <%= @total_for_category %></span>
+  </div>
+  <hr>
+    <% @group.entities.each do |entity| %>
+      <div class="categories-show-li">
+        <div class="left">
+          <%= entity.name %>
+        </div>
+        <div class="right">
+          $ <%= entity.amount %>
+        </div>
+      </div>
+    <% end %>
+  <%= link_to new_group_entity_path(@group), class: "add-category" do %>
+    <div class="add-category-border">
+      <div class="add-category-link">ADD EXPENSE</div>
+    </div>
+  <% end %>
+</div>

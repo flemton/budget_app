@@ -1,0 +1,36 @@
+<div class="container">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="auth-nav-container">
+    <%= link_to 'javascript:history.back()', class: 'nav-item' do %>
+      <%= image_tag('left-arrow.png', alt: 'Back', class: 'left-arrow') %>
+    <% end %>
+    <h2 class="nav-items">REGISTER</h2>
+    <p class="nav-item">
+      <%= f.submit "Next" %></p>
+  </div>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="photo-container">
+    <%= f.file_field :profile_photo, id: "profile_photo", style: "display: none;" %>
+      <label for="profile_photo" class="file-upload-label">
+      <%= image_tag('profile-photo.png', alt: 'Profile icon', class: 'profile-icon') %>
+      <p>Upload photo</p>
+    </label>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+  </div>
+
+<% end %>
+  </div>  
+</div>

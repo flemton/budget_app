@@ -1,0 +1,24 @@
+<div class="container">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="auth-nav-container">
+    <%= link_to 'javascript:history.back()', class: 'nav-item' do %>
+      <%= image_tag('left-arrow.png', alt: 'Back', class: 'left-arrow') %>
+    <% end %>
+    <h2 class="nav-items">LOGIN</h2>
+    <p class="nav-item">
+      <%= f.submit "Log In" %></p>
+  </div>
+  <div class="fields">
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    </div>    
+  <% end %>
+  </div>
+
+  <%= link_to "Forgot password?", new_password_path(resource_name), class: 'forgot'%>
+  
+</div>
